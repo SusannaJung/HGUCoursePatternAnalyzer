@@ -1,6 +1,7 @@
 package edu.handong.analysis;
 
 import edu.handong.analysis.datamodel.Course;
+
 import edu.handong.analysis.datamodel.Student;
 
 public class HGUCoursePatternAnalyzer {
@@ -58,6 +59,7 @@ public class HGUCoursePatternAnalyzer {
 		// TODO: implement this method
 		
 		
+		
 		return null;
 	}
 
@@ -70,6 +72,8 @@ public class HGUCoursePatternAnalyzer {
 	private boolean studentExist(Student[] students, Student student) {
 		
 		// TODO: implement this method
+		
+		 instanName !=null
 
 		return false;
 	}
