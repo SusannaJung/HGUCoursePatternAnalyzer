@@ -52,7 +52,7 @@ public class HGUCoursePatternAnalyzer {
 	 * @param lines
 	 * @return
 	 */
-	public Student[] initiateStudentArrayFromLines(String[] lines) {
+	private Student[] initiateStudentArrayFromLines(String[] lines) {
 		
 		// TODO: implement this method
 		
@@ -89,7 +89,7 @@ public class HGUCoursePatternAnalyzer {
 	 * @param student
 	 * @return boolean
 	 */
-	public boolean studentExist(Student[] students, Student student) {
+	private boolean studentExist(Student[] students, Student student) {
 		
 		// TODO: implement this method
 		
@@ -113,7 +113,7 @@ public class HGUCoursePatternAnalyzer {
 	 * @param lines
 	 * @return
 	 */
-	public Course[] initiateCourseArrayFromLines(String[] lines) {
+	private Course[] initiateCourseArrayFromLines(String[] lines) {
 		
 		// TODO: implement this method
 		
@@ -150,7 +150,7 @@ public class HGUCoursePatternAnalyzer {
 	 * @param course
 	 * @return boolean
 	 */
-	public boolean courseExist(Course[] courses, Course course) {
+	private boolean courseExist(Course[] courses, Course course) {
 		
 		// TODO: implement this method
 		while(courses!=null && course!=null) {
