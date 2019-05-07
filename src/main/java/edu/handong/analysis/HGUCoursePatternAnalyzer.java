@@ -1,8 +1,6 @@
 package edu.handong.analysis;
 
-import edu.handong.analysis.datamodel.Course;
-
-import edu.handong.analysis.datamodel.Student;
+import edu.handong.analysis.datamodel.*;
 
 public class HGUCoursePatternAnalyzer {
 	
@@ -58,9 +56,31 @@ public class HGUCoursePatternAnalyzer {
 		
 		// TODO: implement this method
 		
+		int k=0;
 		
+		Student[] initStudent = new Student[numOfStudents];
 		
-		return null;
+		Student[] checkStudent=new Student[lines.length];
+		
+		for(int i=0;i<numOfStudents;i++) {
+			
+			initStudent[i]= new Student(" ");
+		}
+		
+		for(int i=0;i<lines.length;i++) {
+			
+			checkStudent[i]=new Student(lines[i].split(",")[1].trim());
+			
+			if(!(studentExist(initStudent,checkStudent[i]))) {
+				
+				initStudent[k]= new Student(checkStudent[i].getName());
+				
+				k++;
+			}
+			
+		}
+		
+		return initStudent;
 	}
 
 	/**
@@ -73,7 +93,17 @@ public class HGUCoursePatternAnalyzer {
 		
 		// TODO: implement this method
 		
-		 instanName !=null
+		while(students!=null && student!=null) {
+		
+			for(int i=0;i<numOfStudents;i++) {
+			
+				if(student.getName().equals(students[i].getName())) {
+				
+				return true;
+				
+				}
+			}
+		}	
 
 		return false;
 	}
@@ -87,7 +117,31 @@ public class HGUCoursePatternAnalyzer {
 		
 		// TODO: implement this method
 		
-		return null;
+		int k=0;
+		
+		Course[] initCourse = new Course[numOfCourses];
+		
+		Course[] checkCourse=new Course[lines.length];
+		
+		for(int i=0;i<numOfCourses;i++) {
+			
+			initCourse[i]= new Course(" ");
+		}
+		
+		for(int i=0;i<lines.length;i++) {
+			
+			checkCourse[i]=new Course(lines[i].split(",")[2].trim());
+			
+			if(!(courseExist(initCourse,checkCourse[i]))) {
+				
+				initCourse[k]= new Course(checkCourse[i].getCourseName());
+				
+				k++;
+			}
+			
+		}
+				
+		return initCourse;
 	}
 
 	/**
@@ -99,6 +153,16 @@ public class HGUCoursePatternAnalyzer {
 	private boolean courseExist(Course[] courses, Course course) {
 		
 		// TODO: implement this method
+		while(courses!=null && course!=null) {
+			
+			for(int i=0;i<numOfCourses;i++) {
+				
+				if(course.getCourseName().equals(courses[i].getCourseName())){
+					
+					return true;
+				}
+			}
+		}
 
 		return false;
 	}

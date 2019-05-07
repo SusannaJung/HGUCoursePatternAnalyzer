@@ -4,9 +4,9 @@ public class Course {
 	
 	private String courseName;
 	
-	public void Course(String name) {
+	public Course(String name) {
 		
-		courseName = name;
+		this.courseName = name;
 		
 	}
 	
